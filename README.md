@@ -15,6 +15,12 @@ start | dev
 ```js
 $ npm start | npm run dev-server 
 ``` 
+> open
+
+```
+localhost:8080
+```
+
 Unit testing 
 > utils :  __test__/array.test.js .
 
