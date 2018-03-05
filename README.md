@@ -1,6 +1,8 @@
 # node-project-template
-node express project template
-by Dawdler [https://github.com/lijinke666/dawdler](https://github.com/lijinke666/dawdler)
+node express project template <br/>
+
+by Dawdler [https://github.com/lijinke666/dawdler](https://github.com/lijinke666/dawdler) <br/>
+
 Have Fun ! 
 
 ## About the system environment
