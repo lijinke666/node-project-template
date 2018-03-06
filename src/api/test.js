@@ -3,7 +3,8 @@ const router = express.Router()
 const VError = require('verror')
 const { httpLogger } = require('../helper/logHelper')
 const debug = require('debug')("testApi")
-const { T_USER } = require('../db/models')
+
+const { T_USER } = require('../db/{__DBNAME__}-models')
 
 router.get('/testApi', async (req, res, next) => {
     const {name} = req.query
