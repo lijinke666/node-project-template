@@ -8,7 +8,6 @@ yarn-error.log*
 .vscode
 logs
 .process.json
-yarn.lock
 
 # Runtime data
 pids
