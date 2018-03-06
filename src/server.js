@@ -38,15 +38,15 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(session({
-    secret: 'nodemq',
-    name: 'nodemq',
+    secret: 'dawdler',
+    name: 'dawdler',
     cookie: { maxAge: 1000 * 60 * 60 * 24 * 7 }, // 设置 cookie 7天后过期
     resave: true,
     rolling: true,
     saveUninitialized: false
 }))
-app.use(require('./middleware/isLogin'))
-app.use(require('./middleware/jwt'))
+// app.use(require('./middleware/isLogin'))
+// app.use(require('./middleware/jwt'))
 
 //api
 app.use(

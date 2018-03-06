@@ -10,12 +10,11 @@ const {
 
 const testAPi = `${host}:${port}/api/test/testApi`
 
-describe('node mq api', ()=>{
+describe('Test api', () => {
     describe(`#${testAPi}`, () => {
-        const testParams = "hello"
-        it(`请求测试接口,需要返回 ${testParams}`, async () => {
-            const {result} = JSON.parse(await request(`${testAPi}?name=${testParams}`))
-            assert( result.yourInput ===  testParams)
+        it(`请求测试接口,需要返回 {users:[xxx]}`, async () => {
+            const { result } = JSON.parse(await request(testAPi))
+            assert(Array.isArray(result.users))
         })
     });
 });

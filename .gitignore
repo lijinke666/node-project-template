@@ -7,6 +7,7 @@ yarn-error.log*
 .history
 .vscode
 logs
+.process.json
 
 # Runtime data
 pids

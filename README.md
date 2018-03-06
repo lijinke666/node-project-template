@@ -43,11 +43,49 @@ $ npm run test
 
 ## App Config
 > config
-- `dev.config.js`       本地开发配置
-- `test.config.js`      测试环境配置
-- `prod.config.js`      生产环境配置
-- `env.js`              环境变量名称定义
-- `index.js`            配置文件入口,根据当前 `env` 自动 导出对应配置文件
+- `dev.config.js`       development config
+- `test.config.js`      test config
+- `prod.config.js`      production config
+- `env.js`              The environment variable names config
+- `index.js`            config root
+
+## Database Connection
+> user mysql 
+```js
+    mysql_db: {
+        "host": "localhost",
+        "port": 3306,
+        "user": "dawdler",
+        "password": "123456",
+        "dataBase": "dawdler"
+    }
+```
+
+## Test Api
+```
+curl http://127.0.0.1:8080/api/testApi
+```
+
+## Api Response
+> like this
+```js
+{
+    "api": "/api/testApi",
+    "code": 200,
+    "message": "SUCCESS",
+    "method": "GET",
+    "version": "0.0.1",
+    "production": false,
+    "result": {
+        "users": {
+            "id": 0,
+            "username": "12345",
+            "password": "9cbf8a4dcb8e30682b927f352d6559a0"
+        }
+    },
+    "total": 0
+}
+```
 
 
 
