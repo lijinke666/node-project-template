@@ -1,11 +1,23 @@
-
 {
-    "passPerPreset": true,
-    "plugins": [
-      "transform-runtime"
-    ],
-    "presets": [
-      "es2015",
-      "stage-0"
+  "plugins": [
+    "@babel/plugin-transform-runtime"
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        [
+          "@babel/preset-env"
+        ]
+      ]
+    }
+  },
+  "presets": [
+    "@babel/preset-env",
+    [
+      "@babel/preset-stage-0",
+      {
+        "decoratorsLegacy": true
+      }
     ]
-  }
+  ]
+}

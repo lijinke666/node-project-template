@@ -13,7 +13,7 @@
 	],
 	"verbose": true,
 	"execMap": {
-		"js": "node --harmony"
+		"js": "node"
 	},
 	"ext": "js json"
 }

@@ -7,12 +7,12 @@ module.exports = {
     adminEmail: "xx@qq.com", //发邮件的人邮箱 [手动填写]
     AUTHCODE: "xxxxxxxxxxx", //授权码 [手动填写]
     //仅作示范,请自行更改
-    mysql_db_path: {
+    mysqlDbPath: {
         "host": "localhost",
         "port": 3306,
         "user": "dawdler",
         "password": "123456",
         "dataBase": "dawdler"
     },
-    mongo_db_path:'mongodb://localhost/dawdler',
+    mongoDbPath:'mongodb://localhost/dawdler',
 }

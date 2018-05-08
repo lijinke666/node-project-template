@@ -1,25 +1,26 @@
-const express = require('express')
-const router = express.Router()
-const VError = require('verror')
-const { httpLogger } = require('../helper/logHelper')
-const debug = require('debug')("testApi")
+const express = require("express");
+const router = express.Router();
+const verror = require("verror");
+const { httpLogger } = require("../helper/logHelper");
+const debug = require("debug")("testApi");
 
-const { T_USER } = require('../db/{__DBNAME__}-models')
+const { T_USER } = require("../db/mysql-models");
 
-router.get('/testApi', async (req, res, next) => {
-    const {name} = req.query
-    try {
-        const users = await T_USER.find({})
-        httpLogger.info('testApi-success',users)
-        res.resRawData = {
-            users
-        }
-        next()
-    } catch (error) {
-        debug(error)
-        next(error)
+router.get("/testApi", async (req, res, next) => {
+  try {
+    const users = await T_USER.find({});
+    if (users.length < 1) {
+      throw verror("users cant not be empty.");
     }
-})
+    httpLogger.info("testApi-success", users);
+    res.resRawData = {
+      users
+    };
+    next();
+  } catch (error) {
+    debug(error);
+    next(error);
+  }
+});
 
-
-module.exports = router
+module.exports = router;

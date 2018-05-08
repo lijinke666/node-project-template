@@ -18,7 +18,7 @@ $ npm start | npm run dev-server
 > open
 
 ```
-localhost:8080
+open localhost:8080
 ```
 
 Unit testing 
